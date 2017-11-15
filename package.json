@@ -1,0 +1,49 @@
+{
+	"name": "portfolio",
+	"version": "0.1.0",
+	"description": "Portfolio for Michael McClure",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"start": "node server.js",
+		"uglify": "webpack -p"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SalamanderMike/portfolio.git"
+	},
+	"keywords": [],
+	"author": "Michael McClure",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SalamanderMike/portfolio/issues"
+	},
+	"homepage": "https://github.com/SalamanderMike/portfolio#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.1",
+		"css-loader": "^0.28.7",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"ng-annotate-loader": "^0.6.1",
+		"node-sass": "^4.6.1",
+		"normalize.css": "^7.0.0",
+		"sass-loader": "^6.0.6",
+		"style-loader": "^0.19.0",
+		"webpack": "^3.8.1"
+	},
+	"dependencies": {
+		"angular": "^1.6.6",
+		"angular-animate": "^1.6.6",
+		"angular-resource": "^1.6.6",
+		"angular-route": "^1.6.6",
+		"angular-ui-bootstrap": "^2.5.6",
+		"ejs": "^2.5.7",
+		"express": "^4.16.2",
+		"jquery": "^3.2.1"
+	},
+	"engines": {
+		"node": "^8.9.1"
+	}
+}
