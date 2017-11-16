@@ -445,14 +445,20 @@ template {
 [hidden] {
   display: none;
 }
+#content {
+  position: relative;
+  left: 140px;
+  width: 100%;
+  height: 1000px;
+  background: #313131;
+  color: #918F8F; }
 
-
-
-
-
-
-
-
+#menu-margin {
+  background: #313131;
+  position: fixed;
+  left: 75px;
+  width: 70px;
+  height: 1000px; }
 
 #menu {
   background: black;
@@ -462,76 +468,72 @@ template {
   height: 1000px;
   color: grey;
   font-size: 2em;
-  text-align: center;
-}
+  text-align: center; }
+  #menu .m-icon {
+    background: url(img/m-icon.small.png);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    margin: 5px 0 100px 0; }
+  #menu :hover {
+    color: #6476fd; }
+  #menu a {
+    color: #918F8F; }
+  #menu .menu-icons {
+    margin-bottom: 20px; }
+  #menu .social-icons {
+    margin-top: 400px; }
 
-#menu-margin {
+#home {
   background: #313131;
-  position: fixed;
-  left: 75px;
-  width: 70px;
-  height: 1000px;
-}
-
-.m-icon {
-  background: url(img/m-icon.small.png);
   position: relative;
-  top: 0px;
-  left: 0px;
-  width: 70px;
-  height: 70px;
-  margin: 5px 0 100px 0;
-}
+  top: 27%;
+  height: 1000px; }
+  #home .greeting {
+    font-size: 64px;
+    line-height: 85%;
+    color: #bababa; }
+  #home .subgreeting {
+    letter-spacing: .8em; }
+  #home .directions {
+    position: relative;
+    left: 50%;
+    margin: 50px 0 0 0; }
+  #home .arrow-small {
+    background: url(img/neon-arrow-small.png);
+    position: absolute;
+    left: 0px;
+    width: 259px;
+    height: 209px; }
+  #home .arrow-large {
+    background: url(img/neon-arrow-big.png);
+    position: absolute;
+    left: 30%;
+    width: 332px;
+    height: 411px; }
 
-#menu :hover {
-  color: white;
-}
-
-.menu-icons {
-  margin-bottom: 20px;
-}
-
-.social-icons {
-  margin-top: 400px;
-}
-
-
-#content {
-  position: relative;
-  left: 140px;
-  width: 100%;
-  height: 1000px;
+#code {
   background: #313131;
-  color: #918F8F;
-}
+  position: relative;
+  top: 27%;
+  height: 1000px; }
 
+#about {
+  background: #313131;
+  position: relative;
+  top: 27%;
+  height: 1000px; }
 
+#culture {
+  background: #313131;
+  position: relative;
+  top: 27%;
+  height: 1000px; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#contact {
+  background: #313131;
+  position: relative;
+  top: 27%;
+  height: 1000px; }
