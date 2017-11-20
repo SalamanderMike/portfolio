@@ -469,6 +469,9 @@ html, body {
   float: left;
   margin: 20px 20px 20px 0; }
 
+.center {
+  text-align: center; }
+
 .right {
   float: right;
   margin: 20px 10% 20px 20px; }
@@ -548,7 +551,7 @@ p {
   #menu .menu-icons {
     margin-bottom: 20px; }
   #menu .social-icons {
-    margin-top: 400px; }
+    margin-top: 350px; }
 
 #menu-margin {
   background: transparent;
@@ -572,7 +575,7 @@ p {
     position: relative;
     left: 50%;
     margin: 50px 0 0 0;
-    text-shadow: 4px 4px 2px black;
+    text-shadow: 2px 2px 2px black;
     color: cyan; }
   #home .arrow-small {
     background: url(img/neon-arrow-small.png);
@@ -642,3 +645,21 @@ p {
   width: 100%;
   padding-top: 25%;
   height: 1000px; }
+  #contact h2 {
+    color: #bababa; }
+  #contact a {
+    font-size: 3em;
+    text-decoration: none; }
+  #contact .arrow-small {
+    background: url(img/neon-arrow-small.png);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 259px;
+    height: 209px; }
+  #contact .linkedin {
+    position: absolute;
+    left: 270px;
+    bottom: 90px;
+    text-shadow: 2px 2px 2px black;
+    color: #6476fd; }
