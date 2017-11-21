@@ -462,7 +462,7 @@ html, body {
 
 .photos {
   box-shadow: inset 2px 2px 15px 5px rgba(0, 0, 0, 0.8);
-  border: 3px ridge #424242;
+  border: 3px ridge #394389;
   margin: 20px; }
 
 .left {
@@ -523,7 +523,9 @@ p {
   top: 0px;
   left: 0px;
   width: 72px;
-  height: 1000px; }
+  height: 1000px;
+
+  }
 
 #menu {
   background: rgba(0, 0, 0, 0.7);
@@ -543,15 +545,21 @@ p {
     left: 0px;
     width: 70px;
     height: 70px;
-    margin: 5px 0 100px 0; }
+    margin: 5px 0 100px 0; 
+    
+  }
   #menu :hover {
     color: #6476fd; }
   #menu a {
     color: #918F8F; }
   #menu .menu-icons {
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+    text-shadow: 6px 6px 6px black;
+  }
   #menu .social-icons {
-    margin-top: 350px; }
+    margin-top: 350px; 
+    text-shadow: 6px 6px 6px black;
+  }
 
 #menu-margin {
   background: transparent;
@@ -576,19 +584,21 @@ p {
     left: 50%;
     margin: 50px 0 0 0;
     text-shadow: 2px 2px 2px black;
-    color: cyan; }
+    color: #6476fd; }
   #home .arrow-small {
     background: url(img/neon-arrow-small.png);
     position: absolute;
-    left: 0px;
-    width: 259px;
-    height: 209px; }
+    left: -90px;
+    width: 300px;
+    height: 250px; 
+  }
   #home .arrow-large {
     background: url(img/neon-arrow-big.png);
     position: absolute;
     left: 30%;
-    width: 332px;
-    height: 411px; }
+    width: 360px;
+    height: 440px; 
+  }
 
 #code {
   background: transparent;
@@ -649,17 +659,23 @@ p {
     color: #bababa; }
   #contact a {
     font-size: 3em;
-    text-decoration: none; }
+    text-decoration: none; 
+    color: #6476fd;
+  }
+  #contact a:hover {
+    color: #3c4694;
+  }
   #contact .arrow-small {
     background: url(img/neon-arrow-small.png);
     position: absolute;
     left: 0px;
     bottom: 0px;
-    width: 259px;
-    height: 209px; }
+    width: 300px;
+    height: 250px; 
+  }
   #contact .linkedin {
     position: absolute;
-    left: 270px;
-    bottom: 90px;
+    left: 280px;
+    bottom: 100px;
     text-shadow: 2px 2px 2px black;
-    color: #6476fd; }
+    color: #ff5a00; }
