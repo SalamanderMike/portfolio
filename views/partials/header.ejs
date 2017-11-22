@@ -13,11 +13,10 @@
 		<script src="/dist/app.bundle.js"></script>
 	</head>
 	<body ng-view>
-		<section id="menu-margin"></section>
 		<div id="menu-background">
 			<section id="menu" role="menu">
 				<div class="m-icon" tooltip-placement="right" uib-tooltip="Michael McClure"></div>
-				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Home">
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Home" ng-mouseover="flicker()">
 					<a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
 				</div>
 				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Code">
@@ -29,7 +28,7 @@
 				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Culture Fit">
 					<a href="#culture"><i class="fa fa-handshake-o" aria-hidden="true"></i></a>
 				</div>
-				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Contact">
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Contact" ng-mouseover="flicker()">
 					<a href="#contact"><i class="fa fa-telegram" aria-hidden="true"></i></a>
 				</div>
 				<div class="social-icons" tooltip-placement="right" uib-tooltip="LinkedIn">

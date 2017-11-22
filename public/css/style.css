@@ -496,6 +496,16 @@ p {
   color: #dddddd;
   margin: 0 15% 0 0; }
 
+.glow-small {
+  background: url(img/glow-arrow-small.png) no-repeat;
+  width: 300px;
+  height: 250px; }
+
+.glow-large {
+  background: url(img/glow-arrow-big.png) no-repeat;
+  width: 360px;
+  height: 440px; }
+
 .blue {
   color: #00bdd8; }
 
@@ -523,9 +533,7 @@ p {
   top: 0px;
   left: 0px;
   width: 72px;
-  height: 1000px;
-
-  }
+  height: 1000px; }
 
 #menu {
   background: rgba(0, 0, 0, 0.7);
@@ -545,27 +553,15 @@ p {
     left: 0px;
     width: 70px;
     height: 70px;
-    margin: 5px 0 100px 0; 
-    
-  }
+    margin: 5px 0 100px 0; }
   #menu :hover {
     color: #6476fd; }
   #menu a {
     color: #918F8F; }
   #menu .menu-icons {
-    margin-bottom: 20px; 
-    text-shadow: 6px 6px 6px black;
-  }
+    margin-bottom: 20px; }
   #menu .social-icons {
-    margin-top: 350px; 
-    text-shadow: 6px 6px 6px black;
-  }
-
-#menu-margin {
-  background: transparent;
-  position: absolute;
-  left: 75px;
-  width: 70px; }
+    margin-top: 350px; }
 
 #home {
   background: transparent;
@@ -590,15 +586,13 @@ p {
     position: absolute;
     left: -90px;
     width: 300px;
-    height: 250px; 
-  }
+    height: 250px; }
   #home .arrow-large {
     background: url(img/neon-arrow-big.png);
     position: absolute;
     left: 30%;
     width: 360px;
-    height: 440px; 
-  }
+    height: 440px; }
 
 #code {
   background: transparent;
@@ -659,23 +653,20 @@ p {
     color: #bababa; }
   #contact a {
     font-size: 3em;
-    text-decoration: none; 
-    color: #6476fd;
-  }
+    text-decoration: none;
+    color: #6476fd; }
   #contact a:hover {
-    color: #3c4694;
-  }
+    color: #3c4694; }
   #contact .arrow-small {
     background: url(img/neon-arrow-small.png);
     position: absolute;
-    left: 0px;
+    left: -90px;
     bottom: 0px;
     width: 300px;
-    height: 250px; 
-  }
+    height: 250px; }
   #contact .linkedin {
     position: absolute;
-    left: 280px;
+    left: 190px;
     bottom: 100px;
     text-shadow: 2px 2px 2px black;
     color: #ff5a00; }
