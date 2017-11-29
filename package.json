@@ -26,11 +26,13 @@
 		"babel-preset-env": "^1.6.1",
 		"css-loader": "^0.28.7",
 		"extract-text-webpack-plugin": "^3.0.2",
+		"file-loader": "^1.1.5",
 		"ng-annotate-loader": "^0.6.1",
 		"node-sass": "^4.6.1",
 		"normalize.css": "^7.0.0",
 		"sass-loader": "^6.0.6",
 		"style-loader": "^0.19.0",
+		"url-loader": "^0.6.2",
 		"webpack": "^3.8.1"
 	},
 	"dependencies": {

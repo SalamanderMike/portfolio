@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const ExtractCSS = new ExtractTextPlugin('/public/css/style.css');
 
 module.exports = {
 	context: __dirname + '/app',
@@ -33,22 +34,33 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
+				use: ExtractCSS.extract({
 					fallback: 'style-loader',
 					use: ['css-loader', 'sass-loader']
 				})
 			},
 			{
 				test: /\.css$/, 
-				use: ExtractTextPlugin.extract({
+				use: ExtractCSS.extract({
 					fallback: 'style-loader',
 					use: ['css-loader']
 				})
-			}
+			},
+			{
+				test: /\.(jpg|jpeg|gif|png)$/,
+				use: [
+				{ 	loader: 'url-loader',
+					options: {
+						limit: 8192,
+						outputPath: '/public/images/',
+						name: '[name].[ext]'
+					}
+				}]
+			},
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('../public/css/style.css'),
+		ExtractCSS,
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor', 
 			filename: 'vendor.bundle.js',
