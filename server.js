@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 // Setup
 app.use('/partials', express.static(path.join(__dirname + '/views/partials')));
 app.use('/public', express.static(path.join(__dirname, '/dist/public')));
+app.use('/dist', express.static(path.join(__dirname, '/dist')));
 app.set('view engine', 'ejs');
 
 
