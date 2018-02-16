@@ -2,6 +2,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	path = require('path'),
 	ejs = require('ejs'),
+	fs = require('fs'),
 	app = express();
 
 
@@ -9,6 +10,23 @@ var express = require('express'),
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+// Functions
+function ejsIncludePath(indexPath, information) {
+	ejs.renderFile(indexPath, function (err, html) {
+		if (err) {
+			console.log("ERROR: " + err);
+			return false;
+		}
+		fs.writeFile(__dirname + '/views/index.ejs', html, function (err) {
+			if (err) {
+				console.log(err);
+				return false
+			}
+			return true;
+		});
+	})
+}
+ejsIncludePath(__dirname + '/views/includes/index.ejs');
 
 // Setup
 app.set('view engine', 'ejs');

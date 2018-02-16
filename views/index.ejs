@@ -1,9 +1,135 @@
-<% include partials/header.ejs %>
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<title ng-bind="title"></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+		<link href="/public/css/style.css" rel="stylesheet" type="text/css"/>
+
+
+		<script src="/dist/vendor.bundle.js"></script>
+		<script src="/dist/app.bundle.js"></script>
+	</head>
+	<body ng-view>
+		<div id="menu-background">
+			<section id="menu" role="menu">
+				<div class="m-icon" tooltip-placement="right" uib-tooltip="Michael McClure"></div>
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Home" ng-mouseover="flicker()">
+					<a href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+				</div>
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Code">
+					<a href="#code"><i class="fa fa-ravelry" aria-hidden="true"></i></a>
+				</div>
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="About Me">
+					<a href="#about"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+				</div>
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Culture Fit">
+					<a href="#culture"><i class="fa fa-handshake-o" aria-hidden="true"></i></a>
+				</div>
+				<div class="menu-icons" tooltip-placement="right" uib-tooltip="Contact" ng-mouseover="flicker()">
+					<a href="#contact"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+				</div>
+				<div class="social-icons" tooltip-placement="right" uib-tooltip="LinkedIn">
+					<a href="https://www.linkedin.com/in/michael-mcclure-69494655/">
+						<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+					</a>
+				</div>
+			</section>
+		</div>
+
 	<section id="content">
-		<% include partials/home.ejs %>
-		<% include partials/code.ejs %>
-		<% include partials/about.ejs %>
-		<% include partials/culture.ejs %>
-		<% include partials/contact.ejs %>
+		<section id="home">
+	<div class="greeting shadow" ng-mouseover="flicker()">
+		<div>Hi,</div>
+		<div>I'm Mike,</div>
+		<div>Web Developer.</div>			
+	</div>
+	<div class="subgreeting" ng-mouseover="flicker()">Web Developer  /  Full Stack  /  Front End</div>
+	<div class="directions color-shadow" ng-mouseover="flicker()">Scroll Or Use The Navigation Strip</div>
+	<div class="arrow-small">
+		<div class="glow-small" ng-show="glow"></div>
+	</div>
+	<div class="arrow-large">
+		<div class="glow-large" ng-show="glow"></div>
+	</div>
+</section>
+
+		<section id="code">
+	<div>
+		<div class="photos left ux">
+			<div class="photo-glow"></div>
+		</div>
+		<br>
+		<h1 class="headings shadow">User Experience</h1>
+		<p class="p-justified">I look at every line of code I write imagining myself as a first time user. I contemplate if the interface is intuitive, pleasant to experience, and if it draws me to return. My focus to optimize the user experience is page load speed, caching data, preloading, or if preloading isn’t possible, distracting the user with something they like. In some cases, that could be a floating tennis ball.</p>		
+	</div>
+	<br>
+	<div>
+		<div class="photos right dry">
+			<div class="photo-glow"></div>
+		</div>
+		<br><br>
+		<h1 class="headings shadow p-right">DRY Code</h1>
+		<p class="p-justified">Taking the ring to Mordor and breakfast doesn’t always need to be two separate functions. I strive to use code efficiently. Sometimes that may be an object literal collecting similar methods or a donut Class calling on an Elvish module that might just be used for a Prophecy.prototype object in a different controller.</p>		
+	</div>
+	<br><br>
+	<div>
+		<div class="photos left bug">
+			<div class="photo-glow"></div>
+		</div>
+		<br>
+		<h1 class="headings shadow">Testing</h1>
+		<p class="p-justified">I’m pretty sure I use Chrome’s DOM more often than my text editor when writing code. 80% of writing code is testing and fixing bugs. For smaller projects, the DOM is your best friend. For larger undertakings that will have many iterations, a testing framework (like Mocha) is an indispensable tool. It would be mortifying for your users to discover a bug you’ve overlooked. Right?</p>		
+	</div>
+	<br><br>
+	<div>
+		<div class="photos right help">
+			<div class="photo-glow"></div>
+		</div>
+		<br>
+		<h1 class="headings shadow p-right">Getting Help</h1>
+		<p class="p-justified">We all find ourselves in code that is a bit beyond our abilities to intuit our way through. Every coder knows how to find answers, but the real skill is in finding the path of least resistance to your understanding in every new situation. Should I jump down the rabbit hole of Stack Overflow, or interrupt my coworker across the room? Sometimes it’s a combination of both. Become as familiar as you can using your impersonal resources so that when you talk to a person, you don’t take much of their time.</p>		
+	</div>
+
+</section>
+
+		<section id="about">
+	<div class="photos left me">
+		<div class="photo-glow"></div>
+	</div>
+	<h1 class="headings shadow">Hi!</h1>
+	<h1 class="headings shadow">I’m Mike.</h1>
+	<p class="p-left"> I build websites from scratch and work with teams on large sites. I’ve been working with web code professionally for over three years at companies such as Foxconn and Apple, but longer on my own.</p>
+	<p class="p-left"> My first experience with programming began at twelve. I discovered a love of algebra and practical thinking that taught me more about cause, effect, and consequence than school ever did. I remember, as a geeky, nerdy kid, converting the story of Star Wars into an algebraic formulae. If anyone in my family had been a programmer, they would have set me on this course much earlier. As an adult programmer, I hope to help other kids realize their coding potential sooner than I had.</p>
+	<p class="p-left"> Coding is a true art that utilizes multiple disciplines. It embraces mathematics through algorithms, psychology through anticipating user experience, creativity, architecture, leadership, and teamwork. It’s the most personally fulfilling career choice I could have ever made. I anticipate working alongside robots to better the world a couple hundred years from now.</p>
+</section>
+
+		<section id="culture">
+	<div class="photos left culture">
+		<div class="photo-glow"></div>
+	</div>
+	<h1 class="headings shadow">Culture</h1>
+	<h1 class="headings shadow">Fit</h1>
+	<p class="p-left">Why can’t we all just get along? Well, because we’re not the same person with the same history. We are diverse and that’s a really good thing more than it is a pain. I remind myself of this when I need to tolerate difficult personalities. And what if I’m the difficult personality that others are tolerating? I try to minimize friction by modeling the behavior I want to experience from others. These would be: Directness tempered by kindness and perspective. Embracing teamwork and not becoming too ego-attached to my [code] babies. Respectful humor and helpfulness. </p>
+	<p class="p-left">I cannot stress enough that a positive culture is more important in a workplace than the project. If offered a choice between enduring demoralizing backstabbing at a cool AI/robotics company, or being respectfully embraced by a kind work-family at a sanitation plant, choose the sanitation plant every time. And then earn your right to be there.</p>
+</section>
+
+		<section id="contact">
+	<div class="headings center shadow" ng-mouseover="flicker()">
+		<h2>Michael McClure</h2>
+		<a class="email" href="mailto:MichaelJohnMcClure@me.com?subject=Mail From Your Site">
+			MichaelJohnMcClure@me.com
+		</a>		
+	</div>
+	<div class="arrow-small">
+		<div class="glow-small" ng-show="glow"></div>
+	</div>
+	<div class="linkedin color-shadow" ng-mouseover="flicker()">Or go to my LinkedIn!</div>
+</section>
+
 	</section>
-<% include partials/footer.ejs %>
+	</body>
+</html>
+
