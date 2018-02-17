@@ -51,7 +51,7 @@ module.exports = {
 				use: [
 				{ 	loader: 'url-loader',
 					options: {
-						limit: 10000,
+						limit: 8000,
 						outputPath: '/public/images/',
 						name: '[name].[ext]'
 					}
