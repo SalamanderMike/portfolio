@@ -7,7 +7,6 @@ export default function AppController ($scope, $timeout, $q) {
 	
 	$scope.flicker = function() {
 		$q.when(number()).then(function(duration){
-			$scope.test = duration;
 			$scope.glow = true;
 			$timeout(function() {
 				$scope.glow = false;
