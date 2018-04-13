@@ -1,0 +1,66 @@
+<section id="example">
+	<div class="arrow-small" ng-mouseover="flicker()">
+		<div class="glow-small" ng-show="glow"></div>
+	</div>
+	<h1 class="headings shadow">Code</h1>
+	<h1 class="headings shadow">Example</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p class="p-justified">As an example of my coding thought process, here’s how I met the challenge of creating flickering neon arrows on this page. </p>
+	<br>
+	<p class="p-justified"><strong>Goal:</strong> 
+		<br>Have neon arrows that flicker randomly and constantly as fringe, atmospheric content. </p>
+	<br>
+	<p class="p-left" ng-mouseover="flicker()"><strong>Obstacles:</strong>
+		<br>1) Create glowing and non-glowing graphics for the arrows.
+		<br>2) Find a way to flicker the graphic at random intervals that are not annoyingly predictable.
+		<br>3) Make the flicker constant without introducing memory leaks.
+	</p>
+	<br>
+	<p class="p-justified"><strong>Web Languages:</strong>
+		<br>HTML5, CSS3, JavaScript, and AngularJS 1.6</p>
+	<br>
+	<p class="p-justified">I first dove into photoshop to create the neon arrows, and separately, their glow. For the glow, I copied the finished arrow into a new document and blurred it with the Gaussian Blur filter. This had the effect of maintaining the same color profile, while making the lines of the arrow diffuse like a glow. I then saved the diffused arrow as a transparent .png.</p>
+	<div class="photo-glow arrows-box">
+		<div class="example-arrow"></div>
+		<div class="example-glow"></div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<p class="p-justified">In HTML, I overlaid the images as a div within a div. I chose this DRY method instead of using CSS to place them in the exact same location. This way, I wouldn’t need to calculate where the glow needed to be should I choose to change the arrow's location. Using AngularJS’ ng-show/hide function, I hid the glow graphic. A JavaScript function will be in charge of revealing the glow graphic at the correct timing.</p>
+	<div class="photo-glow example-div"></div>
+	<br>
+	<br>
+	<br>
+
+	<p class="p-justified">With my View and Model in place, the arrow needs a JavaScript Controller. Human brains are pattern sensitive; a recurring flash on the webpage will quickly become irritating if not varied randomly. In order to keep the flicker pleasant, I needed to manufacture a simple interval pattern that changed constantly. After experimentation, I settled on a motif of two quick, to one long interval. I put this pattern into an array as five interval values. Two of those values would represent a non-glow while three of them, a glow, thus creating a flicker of off and on.</p>
+	<div class="photo-glow example-array"></div>
+	<br>
+	<br>
+	<br>
+
+	<p class="p-justified">From here, I needed to craft a method, called intervals( ), to redistribute these interval values into a random order every time the flicker was called. I chose to use a Math.random function on the array’s index, then push the reordered values into another array called “duration”. In this way, we have a constantly varying pattern of the same values.</p>
+	<div class="photo-glow example-intervals"></div>
+	<br>
+	<br>
+	<br>
+
+	<p class="p-justified">For the flicker effect, I would need to draw on AngularJS’ version of JavaScript's Promise ($q) and Timeout ($timeout) methods. $q has served me very well in creating an island of synchronicity within JavaScript’s asynchronous universe.</p>
+	<br>
+	<p class="p-justified">I attached a flicker( ) function to AngularJS’ $scope making it accessible from HTML. When called, it invokes my intervals( ) function for an array of randomly distributed duration values. $q ensures those values are received before proceeding to call an anonymous function of five nested $timeouts. Each Timeout pauses for several milliseconds according to the values received from the duration array. The arrow glow switches on, then runs through each duration value switching off, then on again until finally switching off at the end of its run, prepared to be called again.</p>
+	<div class="photo-glow example-flicker"></div>
+	<br>
+	<br>
+	<br>
+
+	<p class="p-justified">Now that the flicker function is set, it needs a way to be called. I could have used JavaScript’s Interval method to call the flicker function every twenty seconds or so. However, Interval has a nasty tendency to create memory leaks and I try to avoid it whenever I can. Thankfully, I’ve always figured out a workaround to Interval. It’s not too difficult if you put some thought into it. In this case, I realized that the natural flow of the user could unwittingly trigger the function. If I create mouseover events in choice locations across the page, the user will trigger the flicker as they explore my content. To the user, it would seem that the flicker happens randomly, outside of their control, but as they stop moving their mouse, the flicker stops as well. No memory leaks, no unnecessary processing power when idle.</p>
+	<br>
+	<p class="p-justified">Feel free to explore some of the mouseover events that call the flicker( )!</p>
+	<div class="photo-glow example-mouseovers"></div>
+</section>
