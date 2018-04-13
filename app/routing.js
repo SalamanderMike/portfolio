@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 export default function router($routeProvider, $locationProvider, $httpProvider) {
 	'ngInject';
 	$routeProvider

@@ -11,8 +11,7 @@ module.exports = {
 			'angular',
 			'angular-animate',
 			'angular-route',
-			'angular-ui-bootstrap',
-			'jquery'
+			'angular-ui-bootstrap'
 			]
 	},
 	output: {
@@ -51,7 +50,7 @@ module.exports = {
 				use: [
 				{ 	loader: 'url-loader',
 					options: {
-						limit: 8000,
+						limit: 2000,
 						outputPath: '/public/images/',
 						name: '[name].[ext]'
 					}

@@ -6,7 +6,7 @@ export default function AppController ($scope, $timeout, $q) {
 
 	
 	$scope.flicker = function() {
-		$q.when(number()).then(function(duration){
+		$q.when(intervals()).then(function(duration){
 			$scope.glow = true;
 			$timeout(function() {
 				$scope.glow = false;
@@ -26,7 +26,7 @@ export default function AppController ($scope, $timeout, $q) {
 		});
 	}
 	
-	function number(){
+	function intervals(){
 		var array = [90,100,110,500,1000];
 		var duration = [];
 		while (i--) {
