@@ -4,6 +4,7 @@ const path = require('path');
 const ExtractCSS = new ExtractTextPlugin('/public/css/style.css');
 
 module.exports = {
+	mode: 'production',
 	context: __dirname + '/app',
 	entry: {
 		app: './app.js',
@@ -16,10 +17,21 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/dist',
-		filename: 'app.bundle.js'
+		filename: '[name].min.js'
 	},
 	resolve: {
 		extensions: ['.js']
+	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /angular/,
+					name: 'vendor',
+					chunks: 'all'
+				}
+			}
+		}
 	},
 	module: {
 		rules: [
@@ -42,7 +54,12 @@ module.exports = {
 				test: /\.css$/, 
 				use: ExtractCSS.extract({
 					fallback: 'style-loader',
-					use: ['css-loader']
+					use: [{ 
+						loader: 'css-loader', 
+						options: { 
+							minimize: true 
+						} 
+					}]
 				})
 			},
 			{
@@ -60,10 +77,8 @@ module.exports = {
 	},
 	plugins: [
 		ExtractCSS,
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor', 
-			filename: 'vendor.bundle.js',
-			minChunks: Infinity
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': '"production"'
 		})
 	]
 };
