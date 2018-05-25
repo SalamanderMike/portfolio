@@ -17,7 +17,7 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/dist',
-		filename: '[name].min.js'
+		filename: '[name].bundle.js'
 	},
 	resolve: {
 		extensions: ['.js']
