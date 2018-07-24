@@ -43,7 +43,7 @@ app.get('*', function (req, res) {
 
 // NODEMON **************************************
 app.listen(process.env.PORT || 3000, function(){
-	console.log("NODEMON IS LISTENING IN THE NODE VAN... localhost:3000");
+	console.log("THE AUDIENCE IS LISTENING... localhost:3000");
 });
 
 
