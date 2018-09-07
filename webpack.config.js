@@ -76,7 +76,7 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'style.css'
+			filename: '/public/style.css'
 		}),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': '"production"'
