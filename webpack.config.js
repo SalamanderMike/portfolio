@@ -1,26 +1,28 @@
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const ExtractCSS = new ExtractTextPlugin('/public/css/style.css');
 
 module.exports = {
 	mode: 'production',
-	context: __dirname + '/app',
 	entry: {
-		app: './app.js',
+		app: './app/app.js',
 		vendor: [
 			'angular',
 			'angular-animate',
 			'angular-route',
 			'angular-ui-bootstrap'
-			]
+		]
 	},
 	output: {
-		path: __dirname + '/dist',
+		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].bundle.js'
 	},
 	resolve: {
-		extensions: ['.js']
+		modules: [
+			'node_modules',
+			path.resolve(__dirname, 'node_modules')
+			], 
+		extensions: ['.js'] 
 	},
 	optimization: {
 		splitChunks: {
@@ -45,22 +47,19 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: ExtractCSS.extract({
-					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
-				})
+				use: 
+					[
+						'style-loader', 
+						MiniCssExtractPlugin.loader,
+						'css-loader', 
+						'sass-loader'
+				]
 			},
 			{
 				test: /\.css$/, 
-				use: ExtractCSS.extract({
-					fallback: 'style-loader',
-					use: [{ 
-						loader: 'css-loader', 
-						options: { 
-							minimize: true 
-						} 
-					}]
-				})
+				use: [
+					"css-loader"
+				]
 			},
 			{
 				test: /\.(jpg|jpeg|gif|png)$/,
@@ -76,7 +75,9 @@ module.exports = {
 		]
 	},
 	plugins: [
-		ExtractCSS,
+		new MiniCssExtractPlugin({
+			filename: 'style.css'
+		}),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': '"production"'
 		})
