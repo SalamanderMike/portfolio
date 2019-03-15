@@ -29,10 +29,8 @@
 		"angular-ui-bootstrap": "^2.5.6",
 		"ejs": "^2.6.1",
 		"express": "^4.16.4",
-		"mini-css-extract-plugin": "^0.4.5"
-	},
-	"devDependencies": {
-		"babel-core": "^6.26.0",
+		"mini-css-extract-plugin": "^0.4.5",
+		"sass-loader": "^6.0.7",
 		"babel-loader": "^7.1.5",
 		"babel-preset-env": "^1.7.0",
 		"css-loader": "^0.28.11",
@@ -40,11 +38,13 @@
 		"ng-annotate-loader": "^0.6.1",
 		"node-sass": "^4.11.0",
 		"normalize.css": "^7.0.0",
-		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
 		"url-loader": "^0.6.2",
 		"webpack-cli": "^3.3.0",
-		"webpack": "^4.29.6"
+		"webpack": "^4.29.6"	
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
 	},
 	"engines": {
 		"node": "^11.11.0",
