@@ -40,9 +40,8 @@ module.exports = {
 			{
 				test: /\.js/,
 				use: [
-				{ loader: 'ng-annotate-loader' },
 				{ loader: 'babel-loader',
-					options: { presets: ['env'] }
+					options: { presets: ['@babel/preset-env'] }
 				}]
 			},
 			{
