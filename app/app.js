@@ -1,5 +1,5 @@
 import 'normalize.css';
-import './styles/app.scss';
+// import './styles/app.scss';
 import angular from 'angular';
 import ngAnimate from 'angular-animate';
 import ngResource from 'angular-resource';
