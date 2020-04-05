@@ -48,16 +48,18 @@ module.exports = {
 				test: /\.scss$/,
 				use: 
 					[
-						'sass-loader',
 						'style-loader', 
-						MiniCssExtractPlugin.loader,
-						'css-loader'
+						'css-loader',
+						'sass-loader',
 				]
 			},
 			{
 				test: /\.css$/, 
 				use: [
-					"css-loader"
+						{
+						loader: MiniCssExtractPlugin.loader,
+						},
+						'css-loader',
 				]
 			},
 			{
