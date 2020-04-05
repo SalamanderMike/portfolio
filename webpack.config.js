@@ -48,10 +48,10 @@ module.exports = {
 				test: /\.scss$/,
 				use: 
 					[
+						'sass-loader',
 						'style-loader', 
 						MiniCssExtractPlugin.loader,
-						'css-loader', 
-						'sass-loader'
+						'css-loader'
 				]
 			},
 			{
