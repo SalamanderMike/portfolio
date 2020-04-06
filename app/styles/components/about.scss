@@ -1,0 +1,19 @@
+#about {
+	background: transparent;
+	position: relative;
+	max-width: 875px;
+	min-width: 700px;
+	min-height: 1000px;
+	padding-top: 200px;
+
+	.me {
+		background: url(./img/me.jpg);
+		width: 330px;
+		height: 340px;
+	}
+
+	.about-p {
+		width: 800px;
+		text-align: left;
+	}  
+}

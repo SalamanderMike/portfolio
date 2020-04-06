@@ -1,0 +1,39 @@
+#home {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  padding-top: 25%;
+  height: 1000px;
+
+  .greeting {
+    font-size: 64px;    
+    line-height: 85%; 
+    color: #bababa; 
+  }
+  .subgreeting {
+    letter-spacing: .8em;
+  }
+
+  .directions {
+    position: relative;
+    left: 50%;
+    margin: 50px 0 0 0;
+    color: #6476fd;
+  }
+
+  .arrow-small {
+    background: url(./img/neon-arrow-small.png);
+    position: absolute;
+    left: -30%;
+    width: 300px;
+    height: 250px; 
+  }
+
+  .arrow-large {
+    background: url(./img/neon-arrow-big.png);
+    position: absolute;
+    left: 30%;
+    width: 360px;
+    height: 440px;   
+  }
+}

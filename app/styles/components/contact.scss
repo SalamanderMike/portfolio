@@ -1,0 +1,38 @@
+#contact {
+	background: transparent;
+	position: relative;
+	width: 100%;
+	padding-top: 25%;
+	height: 1000px;
+
+
+	h2 {
+		color: #bababa;
+	}
+
+	a {
+	    font-size: 3em;
+	    text-decoration: none;
+	    color: #6476fd;
+	}
+
+	a:hover {
+		color: #3c4694;
+	}
+
+	.arrow-small {
+		background: url(./img/neon-arrow-small.png);
+		position: absolute;
+		left: -30%;
+		bottom: 0px;
+		width: 300px;
+		height: 250px; 
+	}
+
+	.linkedin {
+		position: absolute;
+	    left: 190px;
+	    bottom: 100px;
+		color: #ff5a00;
+	}
+}
