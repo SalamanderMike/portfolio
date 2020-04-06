@@ -1,4 +1,4 @@
-// Disable these two lines for production
+// May need to disable these two lines for production
 // vvvvvvvvvvvvvvvvvvvvvvvvvvv
 import './styles/app.scss';
 import 'normalize.css';
