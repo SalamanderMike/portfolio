@@ -1,5 +1,6 @@
+// import './styles/app.scss'; // Disable this line for production
+
 import 'normalize.css';
-// import './styles/app.scss';
 import angular from 'angular';
 import ngRoute from 'angular-route';
 import ngAnimate from 'angular-animate';
