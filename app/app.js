@@ -1,9 +1,9 @@
 import 'normalize.css';
-// import './styles/app.scss';
+import './styles/app.scss';
 import angular from 'angular';
+import ngRoute from 'angular-route';
 import ngAnimate from 'angular-animate';
 import ngResource from 'angular-resource';
-import ngRoute from 'angular-route';
 import uiBootstrap from 'angular-ui-bootstrap';
 
 import router from './routing';

@@ -57,9 +57,6 @@ module.exports = {
 			{
 				test: /\.css$/, 
 				use: [
-						{
-						loader: MiniCssExtractPlugin.loader,
-						},
 						'css-loader',
 				]
 			},
@@ -73,7 +70,7 @@ module.exports = {
 						name: '[name].[ext]'
 					}
 				}]
-			},
+			}
 		]
 	},
 	plugins: [
