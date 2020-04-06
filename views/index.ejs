@@ -4,9 +4,15 @@
 		<title ng-bind="title"></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 
 		<link 	href="/public/css/style.css" rel="stylesheet" type="text/css"/>
 		<script src="/dist/vendor.bundle.js"></script>
@@ -46,7 +52,7 @@
 
 	<section id="content">
 		<section id="home">
-	<div class="greeting shadow" ng-mouseover="flicker()">
+	<div class="greeting" ng-mouseover="flicker()">
 		<div>Hi,</div>
 		<div>I'm Mike,</div>
 		<div>Web Developer.</div>			
@@ -67,7 +73,7 @@
 			<div class="photo-glow"></div>
 		</div>
 		<br>
-		<h1 class="headings shadow">User Experience</h1>
+		<h1 class="headings">User Experience</h1>
 		<p class="p-justified">Look at every line of code imagining yourself as a first-time user. Contemplate if the interface is intuitive, pleasant, and would draw you to return. The goal is to optimize user experience such as focusing on load speed by caching data or preloading. If preloading isn’t possible, distract the user with something they like. In some cases, that could be a floating tennis ball.</p>
 	</div>
 	<br>
@@ -76,7 +82,7 @@
 			<div class="photo-glow"></div>
 		</div>
 		<br><br>
-		<h1 class="headings shadow p-right">DRY Code</h1>
+		<h1 class="headings p-right">DRY Code</h1>
 		<p class="p-justified">Taking the ring to Mordor and second-breakfast doesn’t always need to be two separate functions. Striving to code efficiently is the ever guiding quest of a code warrior. Object literals in JavaScript or Classes in Ruby are two classic methods used to follow the acronym of "Don't Repeat Yourself."</p>
 	</div>
 	<br><br>
@@ -85,7 +91,7 @@
 			<div class="photo-glow"></div>
 		</div>
 		<br>
-		<h1 class="headings shadow">Testing</h1>
+		<h1 class="headings">Testing</h1>
 		<p class="p-justified">I’m pretty sure most web developers use a browser's DOM just as often as a text editor when developing code. Testing and fixing bugs can easily comprise 80% of development. For smaller projects, the DOM is your best friend. For more complex undertakings that will have many iterations, a testing framework (like Mocha) is an indispensable tool. It's responsible and good practce to test every step of the way.</p>
 	</div>
 	<br><br>
@@ -94,7 +100,7 @@
 			<div class="photo-glow"></div>
 		</div>
 		<br>
-		<h1 class="headings shadow p-right">Getting Help</h1>
+		<h1 class="headings p-right">Getting Help</h1>
 		<p class="p-justified">Every good developer bookmarks resources to find answers to code problems that stump them. However, sometimes the fastest way to get over a hurdle is to respectfully ask the coder sitting next to you for a hand. Become extremely familiar with your digital resources, but don't be afraid to utilize your team, as well. Helping each other out builds positive relationships.</p>
 	</div>
 
@@ -104,8 +110,8 @@
 	<div class="arrow-small" ng-mouseover="flicker()">
 		<div class="glow-small" ng-show="glow"></div>
 	</div>
-	<h1 class="headings shadow">Code</h1>
-	<h1 class="headings shadow">Example</h1>
+	<h1 class="headings">Code</h1>
+	<h1 class="headings">Example</h1>
 	<br>
 	<br>
 	<br>
@@ -171,8 +177,8 @@
 	<div class="photos left me">
 		<div class="photo-glow"></div>
 	</div>
-	<h1 class="headings shadow">Hi!</h1>
-	<h1 class="headings shadow">I’m Mike.</h1>
+	<h1 class="headings">Hi!</h1>
+	<h1 class="headings">I’m Mike.</h1>
 	<p class="p-left">I build websites and also work with teams on large web apps. I’ve been a professional web developer for over three years sharing my skills with cool companies such as Apple, Foxconn, and Fitbit.</p>
 	<p class="p-left">I was twelve when I wrote my first program moving green pixels across a black screen. In high school, I discovered the love of logic and algebra that gave me a philosophy of thinking that has shaped my mind ever since. I was one of those geeky, nerdy kids who spent their lunch breaks converting the saga of Star Wars into algebraic formulas, but didn't dare tell anyone. Had there been programmers in my family to encourage me, I would have stayed this course. Instead, I took a multifarious path through performance, music composition, and education before recently coming back to code. As an adult programmer, I hope to help others realize their coding potential and create amazing things.</p>
 	<p class="p-left">Coding is a true art form that utilizes multiple disciplines. It's founded in mathematics, but in anticipating user experience, it touches psychology. It's creative, builds an understanding of architecture, leadership, and teamwork.</p>
@@ -183,8 +189,7 @@
 	<div class="photos left culture">
 		<div class="photo-glow"></div>
 	</div>
-	<h1 class="headings shadow">Culture</h1>
-	<h1 class="headings shadow">Fit</h1>
+	<h1 class="headings">Culture Fit</h1>
 	<p class="p-left">It would be nice if we got along with our teammates as well as we do with our BFFs. Reality is, we are culturally, physically, and emotionally diverse adults; and ultimately, that reality is <strong>so</strong> much more engaging. When tolerating difficult personalities, keep this as a reminder. And remember, sometimes <i>we're</i> the difficult personality that others are tolerating. </p>
 	<p class="p-left">To minimize friction, model the behavior you want to experience from your teammates. Be kindly direct and maintain broad perspective. Ego-attachment to your code is not worth the tension it creates in your team. Keep your humor respectful, and be generous with your help. </p>
 	<p class="p-left">You'll likely discover that a positive workplace culture makes every project feel like Christmas. Support that culture and earn your right to be there.</p>
