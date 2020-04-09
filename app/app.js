@@ -1,8 +1,5 @@
-// May need to disable these two lines for production
-// vvvvvvvvvvvvvvvvvvvvvvvvvvv
 import './styles/app.scss'
 import 'normalize.css'
-// ^^^^^^^^^^^^^^^^^^^^^^^
 
 import angular from 'angular'
 import ngRoute from 'angular-route'
