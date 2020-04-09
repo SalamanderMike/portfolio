@@ -4,16 +4,16 @@ html, body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  color: #918F8F; 
+  color: #918F8F;
 }
 
 #gradient {
-  background: linear-gradient(to right, 
+  background: linear-gradient(to right,
     rgba(0,0,0,.7) 0%,
     rgba(0,0,0,0) 30%,
     rgba(0,0,0,0) 70%,
     rgba(0,0,0,.6) 100%);
-  position: fixed; 
+  position: fixed;
   height: 100%;
   width: 100%;
 }
@@ -29,7 +29,7 @@ html, body {
 .photos {
   box-shadow: inset 2px 2px 15px 5px rgba(0, 0, 0, .8);
   border: 3px ridge #394389;
-  margin: 20px; 
+  margin: 20px;
 }
 
 .photo-glow {
@@ -39,7 +39,7 @@ html, body {
 
 .left {
   float: left;
-  margin: 20px 20px 20px 0; 
+  margin: 20px 20px 20px 0;
 }
 
 .center {
@@ -47,7 +47,7 @@ html, body {
 }
 
 .right {
-  float: right; 
+  float: right;
   margin: 20px 0 20px 20px;
 }
 
@@ -59,35 +59,35 @@ p {
   text-align: justify; }
 
 .p-right {
-  text-align: right; 
+  text-align: right;
 }
 
 .p-left {
-  text-align: left; 
+  text-align: left;
 }
 
 .shadow {
-  text-shadow: 2px 2px 1px black; 
+  text-shadow: 2px 2px 1px black;
 }
 
 .color-shadow {
-  text-shadow: 0px 0px 3px rgba(255,255,0, 0.2); 
+  text-shadow: 0px 0px 3px rgba(255,255,0, 0.2);
 }
 
 .headings {
-  color: #dddddd; 
+  color: #dddddd;
   margin: 0 15% 0 0;
 }
 
 .glow-small {
   background: url(./img/glow-arrow-small.png) no-repeat;
   width: 300px;
-  height: 250px; 
+  height: 250px;
 }
 .glow-large {
   background: url(./img/glow-arrow-big.png) no-repeat;
   width: 360px;
-  height: 440px; 
+  height: 440px;
 }
 
 

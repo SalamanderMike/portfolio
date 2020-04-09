@@ -11,12 +11,12 @@
 	    left: 150px;
 	    top: -20px;
 	    width: 300px;
-	    height: 250px; 
+	    height: 250px;
 	}
 
 	.arrows-box {
 		background: rgb(42,33,28);
-	    height: 440px; 
+	    height: 440px;
 		max-width: 875px;
 		min-width: 704px;
 	    text-align: center;
@@ -24,14 +24,14 @@
 		.example-arrow {
 			background: url(./img/neon-arrow-big.png) no-repeat;
 			display: inline-block;
-			height: 100%;   
+			height: 100%;
 			width: 49%;
 		}
 
 		.example-glow {
 			background: url(./img/glow-arrow-big.png) no-repeat;
 			display: inline-block;
-			height: 100%; 
+			height: 100%;
 			width: 49%;
 		}
 	}
@@ -40,7 +40,7 @@
 		background: url(./img/example-div.png) no-repeat;
 		background-color: rgba(45,34,27,1);
 		display: inline-block;
-		height: 82px;  
+		height: 82px;
 		max-width: 875px;
 		min-width: 100%;
 	}
@@ -48,23 +48,23 @@
 		background: url(./img/example-array.png) no-repeat;
 		background-color: rgba(45,34,27,1);
 		display: inline-block;
-		height: 31px;  
+		height: 31px;
 		max-width: 875px;
 		min-width: 100%;
 	}
 	.example-intervals {
-		background: url(./img/example-intervals.png) no-repeat;
-		background-color: rgba(45,34,27,1);
+		background: url(./img/example-intervals.jpg) no-repeat;
+		background-color: black;
 		display: inline-block;
-		height: 386px;  
+		height: 257px;
 		max-width: 875px;
 		min-width: 100%;
 	}
 	.example-flicker {
-		background: url(./img/example-flicker.png) no-repeat;
-		background-color: rgba(56,44,37,1);
+		background: url(./img/example-flicker.jpg) no-repeat;
+		background-color: black;
 		display: inline-block;
-		height: 568px;  
+		height: 407px;
 		max-width: 875px;
 		min-width: 100%;
 	}
@@ -72,7 +72,7 @@
 		background: url(./img/example-mouseovers.jpg) no-repeat;
 		background-color: rgba(0,0,0,0.4);
 		display: inline-block;
-		height: 679px;  
+		height: 679px;
 		max-width: 875px;
 		min-width: 100%;
 	}
