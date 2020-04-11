@@ -1,0 +1,8 @@
+html, body {
+  background: url(/public/images/grey-linen.jpg) repeat #323232;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  color: #918F8F;
+}
